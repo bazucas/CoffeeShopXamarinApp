@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:CoffeeShopXamarinApp.Pages;assembly=CoffeeShopXamarinApp"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="CoffeeShopXamarinApp.Pages.HomePage"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarSelectedItemColor="Yellow" BarBackgroundColor="#f50057"
+             android:TabbedPage.BarItemColor="White" Title="CoffeeShop">
+
+    <pages:MenuPage Title="Menu" Icon="menu.png"/>
+    <pages:ReservationPage Title="Reservation" Icon="reservation.png"/>
+    <pages:InfoPage Title="Info" Icon="information.png"/>
+</TabbedPage>

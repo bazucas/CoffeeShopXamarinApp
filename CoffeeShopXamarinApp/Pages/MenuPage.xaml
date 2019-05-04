@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="CoffeeShopXamarinApp.Pages.MenuPage">
+    <ContentPage.Content>
+        <Grid>
+            <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu" ItemSelected="LvMenu_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Image Source="{Binding Image}" HeightRequest="300" Aspect="Fill"/>
+                                <!--<forms:CachedImage LoadingPlaceholder="placeholderimage.png" HeightRequest="200" Aspect="Fill"
+                                                   DownsampleToViewSize="true"
+                                                   Source = "{Binding Image}" CacheType="All">
+                                </forms:CachedImage>-->
+                                <BoxView BackgroundColor="Black" Opacity="0.4"/>
+                                <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="BusyIndicator" HorizontalOptions="Center" VerticalOptions="Center" Color="#ff5722" IsRunning="True"></ActivityIndicator>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

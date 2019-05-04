@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopXamarinApp.Pages.ReservationPage" BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Entry x:Name="EntName" Placeholder="Name"/>
+            <Entry x:Name="EntEmail"  Placeholder="Email"/>
+            <Entry x:Name="EntPhone"  Placeholder="Phone"/>
+            <Entry x:Name="EntPeople"  Placeholder="How many?"/>
+            <Label Text="Booking Date"/>
+            <DatePicker x:Name="DpBookingDate"  Format="D"/>
+            <Label Text="Booking Time"/>
+            <TimePicker x:Name="TpBookingTime" />
+            <Button x:Name="BtnBookTable" Text="Book Table" TextColor="White" FontSize="Medium" BackgroundColor="#f50057" Clicked="BtnBookTable_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

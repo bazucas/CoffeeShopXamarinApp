@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="CoffeeShopXamarinApp.Pages.SubMenuPage">
+    <ContentPage.Content>
+        <ListView x:Name="LvSubMenu" SeparatorVisibility="None" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Image Source="{Binding Image}" HeightRequest="300" Aspect="Fill"/>
+                            <!--<forms:CachedImage LoadingPlaceholder="placeholder.png" HeightRequest="300" Aspect="Fill"
+                                               DownsampleToViewSize="true" Source="{Binding Image}" CacheType="All">
+                            </forms:CachedImage>-->
+                            <BoxView BackgroundColor="Black" Opacity="0.4"/>
+                            <StackLayout VerticalOptions="End" Margin="5">
+                                <Label Text="{Binding Name}" FontSize="Large" TextColor="Yellow"/>
+                                <Label Text="{Binding Price}" FontSize="Medium" TextColor="White"/>
+                                <Label Text="{Binding Description}" FontSize="Small" TextColor="White"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
